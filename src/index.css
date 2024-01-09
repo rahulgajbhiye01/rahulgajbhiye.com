@@ -3,12 +3,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
-  font-family: "Abel", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,22 +13,18 @@ body {
   text-decoration: none;
 }
 
+body {
+  font-family: "Abel", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 a {
   text-decoration: none;
 }
 
 ul {
   list-style-type: none;
-}
-
-:root {
-  --bg-color-primary: #1f363d;
-
-  --container-width-lg: 75%;
-  --container-width-md: 86%;
-  --container-width-sm: 90%;
-
-  --transition-a: all 400ms ease;
 }
 
 ::-webkit-scrollbar {
