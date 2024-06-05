@@ -23,7 +23,7 @@ const ExperienceCard: React.FC<cardProps> = (props) => {
         <CardTitle className="whitespace-nowrap text-3xl">{position}</CardTitle>
         <CardDescription className="text-2xl">{company}</CardDescription>
       </CardHeader>
-      <CardFooter className="text-xl font-light">{timeline}</CardFooter>
+      <CardFooter className="text-lg font-medium">{timeline}</CardFooter>
     </Card>
   );
 };

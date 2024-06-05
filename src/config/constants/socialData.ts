@@ -1,7 +1,6 @@
 import React from "react";
 
 import { FaSquareXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { GrMail } from "react-icons/gr";
 import { GoDownload } from "react-icons/go";
 
 const socialData = [
