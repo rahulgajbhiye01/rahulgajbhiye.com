@@ -1,6 +1,6 @@
 "use client";
 
-import skillData from "@/constants/skillData";
+import skillData from "@/config/constants/skillData";
 
 type skillProps = {
   scope: string;

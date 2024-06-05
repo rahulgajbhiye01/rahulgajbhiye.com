@@ -1,6 +1,6 @@
 "use client";
 
-import socialData from "@/constants/socialData";
+import socialData from "@/config/constants/socialData";
 import { cn } from "@/lib/utils";
 
 type social = {

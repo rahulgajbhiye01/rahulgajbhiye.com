@@ -7,12 +7,8 @@ import Skill from "@/components/custom-ui/skill";
 import ProjectCard from "@/components/custom-ui/project-card";
 import ExperienceCard from "@/components/custom-ui/experience-card";
 
-import experienceData from "@/constants/experienceData";
-import projectData from "@/constants/projectData";
-
-import experience from "@/assets/experience.svg";
-import skills from "@/assets/skills.svg";
-import contact from "@/assets/contact.svg";
+import experienceData from "@/config/constants/experienceData";
+import projectData from "@/config/constants/projectData";
 
 import {
   Carousel,
@@ -29,7 +25,7 @@ export default function Root() {
         <div className="flex w-full items-center justify-center md:py-52">
           <div className="flex flex-col gap-4 xl:gap-8">
             <h1 className="text-3xl font-bold md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-6xl">
-              I&apos;m a Web & Software <br />
+              Hi, my naI&apos;m a Web & Software <br />
               Developer from India.
             </h1>
             <div className="flex flex-col gap-4 xl:gap-8">
@@ -81,7 +77,7 @@ export default function Root() {
         </div>
       </section>
       <SectionBase
-        imageSrc={skills}
+        imageSrc={"/images/skills.svg"}
         imageAlt="skills"
         sectionName="Tech Stack"
         sectionClass="xl:h-screen xl:snap-start"
@@ -98,7 +94,7 @@ export default function Root() {
         </div>
       </SectionBase>
       <SectionBase
-        imageSrc={experience}
+        imageSrc={"/images/experience.svg"}
         imageAlt="experience"
         sectionName="Experience"
         sectionClass="xl:h-screen xl:snap-start"
@@ -123,7 +119,7 @@ export default function Root() {
         </Carousel>
       </SectionBase>
       <SectionBase
-        imageSrc={contact}
+        imageSrc={"/images/contact.svg"}
         imageAlt="contact"
         sectionName="Contact"
         sectionClass="xl:h-screen xl:snap-start"
