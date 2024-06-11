@@ -1,16 +1,16 @@
 export const siteConfig = {
-  name: "Rahul Gajbhiye | Software Developer",
+  name: "Rahul Gajbhiye | Full Stack Developer",
   description:
-    "Rahul Gajbhiye is a Software Developer who is passionate about building solutions and contributing to open source communities",
+    "Rahul Gajbhiye is a Full Stack Developer, developing enterpise solutions and contributing to open source communities",
   url: "https://dev.rahulgajbhiye.com",
 
   author: {
     name: "Rahul Gajbhiye",
     avatar: "/images/avatar.png",
-    bio: "Software Developer",
+    bio: "Full Stack Developer & Cloud Engineer",
     mail: "rahulgajbhiye201@gmail.com",
     description:
-      "Seasoned software engineer especially in frontend side, with a passion for creating pixel-perfect web experiences.",
+      "Seasoned developer especially in frontend side, with a passion for creating pixel-perfect web experiences.",
   },
 
   links: {

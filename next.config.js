@@ -4,12 +4,12 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: "/example",
-          destination: "https://cryptoconverter-frontend.vercel.app/",
+          source: "/cryptosh",
+          destination: "https://cryptosh.rahulgajbhiye.com/",
         },
         {
           source: "/letter",
-          destination: "https://valentinesletter.vercel.app/",
+          destination: "https://letter.rahulgajbhiye.com/",
         },
       ],
     };

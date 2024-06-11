@@ -21,7 +21,7 @@ const socialData = [
     name: "Twitter",
   },
   {
-    link: "https://drive.google.com/file/d/1SEnGoJ-Qi0zSisBEGMUxJ2fjGugZzc_9/view?usp=drive_link",
+    link: "https://drive.google.com/drive/folders/1T-q9VJ1BGdrIAGL_RvyIlxnKKfI0JzDb?usp=drive_link",
     icon: React.createElement(GoDownload),
     name: "Resume",
   },
