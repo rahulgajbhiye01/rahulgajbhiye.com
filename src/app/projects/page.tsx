@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/custom-ui/project-card";
+import ProjectCard from "@/components/ProjectCard";
 import projectData from "@/config/constants/projectData";
 
 export default function projects() {
@@ -9,7 +9,7 @@ export default function projects() {
           <ProjectCard
             key={item.name}
             name={item.name}
-            description={item.discription}
+            description={item.description}
             github={item.github}
             link={item.link}
             techstack={item.techstack}

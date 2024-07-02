@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import experience from "@/assets/experience.svg";
+import { cn } from "@/utils/utils";
+
 type Props = {
   sectionClass: string;
   divClass: string;
@@ -14,7 +14,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const SectionBase: React.FC<Props> = (props) => {
+const Home: React.FC<Props> = (props) => {
   return (
     <section
       className={cn("flex items-center justify-center", props.sectionClass)}
@@ -58,4 +58,4 @@ const SectionBase: React.FC<Props> = (props) => {
   );
 };
 
-export default SectionBase;
+export default Home;

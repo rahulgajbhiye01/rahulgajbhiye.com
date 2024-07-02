@@ -1,7 +1,7 @@
 const projectData = [
   {
     name: "Letter",
-    discription:
+    description:
       "Web app for crafting heartfelt messages for your loved ones, featuring customizable templates and delightful digital animation.",
     github: "https://github.com/rahulgajbhiye201/letter",
     link: "https://letter.rahulgajbhiye.com/",
@@ -9,7 +9,7 @@ const projectData = [
   },
   {
     name: "Cryptosh",
-    discription:
+    description:
       "Intuitive platform enabling swift conversion of over 100+ cryptocurrencies to 100+ fiat currencies, including USD, INR, and more.",
     github: "https://github.com/rahulgajbhiye201/cryptosh",
     link: "https://cryptosh.rahulgajbhiye.com/",

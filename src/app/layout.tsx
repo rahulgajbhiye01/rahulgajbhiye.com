@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 
-import { ThemeProvider } from "@/providers/theme-provider";
+import { ThemeProvider } from "@/contexts/theme-provider";
 import { siteConfig } from "@/config/site";
-import Nav from "@/components/Nav";
+import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "cyan" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://${process.env.VERCEL_URL}"),
   title: {
     default: "Rahul Gajbhiye",
     template: "%s | Rahul Gajbhiye",
@@ -22,10 +31,6 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Rahul Gajbhiye",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -73,7 +78,7 @@ export default function RootLayout({
         >
           <main className="flex h-screen flex-col overflow-x-hidden overflow-y-scroll scrollbar-track-primary scrollbar-thumb-background md:scrollbar-thin xl:snap-y xl:snap-mandatory">
             <div className="bg-background text-foreground">
-              <Nav />
+              <Navbar />
               {children}
             </div>
             <Toaster />

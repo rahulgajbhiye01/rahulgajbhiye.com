@@ -14,13 +14,13 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const Nav = () => {
+const Navbar = () => {
   const { toast } = useToast();
   return (
     <header className="sticky top-0 z-50 flex w-full rounded-2xl bg-inherit">
       <NavigationMenu className="mx-4 flex h-14 max-w-full flex-grow justify-between xl:mx-8">
         <p className="hidden font-semibold md:block md:text-2xl xl:text-3xl">
-          Rahul Gajbiye
+          Rahul Gajbhiye
         </p>
         <NavigationMenuList className="lg:text-md flex flex-row text-base xl:text-base 2xl:text-lg">
           <NavigationMenuItem>
@@ -42,7 +42,9 @@ const Nav = () => {
           <NavigationMenuItem>
             <Link href="/blog" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <span className="text-base xl:text-base 2xl:text-lg">Blog</span>
+                <span className="text-base xl:text-base 2xl:text-lg">
+                  Blogs
+                </span>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -66,4 +68,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navbar;

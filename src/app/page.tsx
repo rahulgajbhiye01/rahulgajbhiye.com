@@ -1,11 +1,9 @@
-import TextAnimation from "@/components/custom-ui/text-animation";
-
-import Social from "@/components/custom-ui/social";
-import SectionBase from "@/components/custom-ui/section-base";
-
-import Skill from "@/components/custom-ui/skill";
-import ProjectCard from "@/components/custom-ui/project-card";
-import ExperienceCard from "@/components/custom-ui/experience-card";
+import TextAnimation from "@/components/ui/TextAnimation";
+import Social from "@/components/Social";
+import Home from "@/components/Home";
+import Skills from "@/components/Skills";
+import ProjectCard from "@/components/ProjectCard";
+import ExperienceCard from "@/components/ExperienceCard";
 
 import experienceData from "@/config/constants/experienceData";
 import projectData from "@/config/constants/projectData";
@@ -62,7 +60,7 @@ export default function Root() {
                   >
                     <ProjectCard
                       name={item.name}
-                      description={item.discription}
+                      description={item.description}
                       github={item.github}
                       link={item.link}
                       techstack={item.techstack}
@@ -76,7 +74,7 @@ export default function Root() {
           </div>
         </div>
       </section>
-      <SectionBase
+      <Home
         imageSrc={"/images/skills.svg"}
         imageAlt="skills"
         sectionName="Tech Stack"
@@ -86,14 +84,14 @@ export default function Root() {
         dataDivClass="md:w-6/12"
       >
         <div className="grid auto-rows-min gap-2 md:grid-cols-2">
-          <Skill scope="LANGUAGES" />
-          <Skill scope="FRAMEWORKS / LIBRARIES" />
-          <Skill scope="DATABASES" />
-          <Skill scope="CLOUD / DEVOPS" />
-          <Skill scope="TOOLS" />
+          <Skills scope="LANGUAGES" />
+          <Skills scope="FRAMEWORKS / LIBRARIES" />
+          <Skills scope="DATABASES" />
+          <Skills scope="CLOUD / DEVOPS" />
+          <Skills scope="TOOLS" />
         </div>
-      </SectionBase>
-      <SectionBase
+      </Home>
+      <Home
         imageSrc={"/images/experience.svg"}
         imageAlt="experience"
         sectionName="Experience"
@@ -117,8 +115,8 @@ export default function Root() {
           </CarouselContent>
           <CarouselNext className="hidden md:flex" />
         </Carousel>
-      </SectionBase>
-      <SectionBase
+      </Home>
+      <Home
         imageSrc={"/images/contact.svg"}
         imageAlt="contact"
         sectionName="Contact"
@@ -133,7 +131,7 @@ export default function Root() {
           <Social varient="contact" name="Twitter" />
           <Social varient="contact" name="Resume" />
         </div>
-      </SectionBase>
+      </Home>
     </>
   );
 }

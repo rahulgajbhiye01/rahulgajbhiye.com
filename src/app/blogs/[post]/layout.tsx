@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blogs",
+  title: {
+    default: "Blogs | Rahul Gajbhiye",
+    template: "%s | Blogs",
+  },
 };
 
 export default function blogsLayout({

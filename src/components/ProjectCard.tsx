@@ -1,7 +1,7 @@
 "use client";
 
 import { FaGithub, FaLink } from "react-icons/fa6";
-import { Button } from "../ui/button";
+import { Button } from "./ui/button";
 import skillData from "@/config/constants/skillData";
 
 import {

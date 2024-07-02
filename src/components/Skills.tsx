@@ -6,7 +6,7 @@ type skillProps = {
   scope: string;
 };
 
-const Skill: React.FC<skillProps> = (props) => {
+const Skills: React.FC<skillProps> = (props) => {
   const { scope } = props;
   return (
     <div className="flex flex-col gap-2">
@@ -34,4 +34,4 @@ const Skill: React.FC<skillProps> = (props) => {
   );
 };
 
-export default Skill;
+export default Skills;
