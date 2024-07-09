@@ -9,7 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects`,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs`,
     },
   ];
 }

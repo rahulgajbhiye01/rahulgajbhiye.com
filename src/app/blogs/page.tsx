@@ -1,7 +1,7 @@
-export default function Blog() {
-  return (
-    <section className="flex min-h-screen items-center justify-center xl:snap-start">
-      Coming Soon...
-    </section>
-  );
+import { getBlogsData } from "@/lib/db/db-helper";
+import FcBlogs from "@/components/pages/Blogs";
+
+export default async function BlogsPage() {
+  const allBlogs = await getBlogsData();
+  return <FcBlogs allBlogs={allBlogs} base="blogs" />;
 }

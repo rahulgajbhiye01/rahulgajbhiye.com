@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
-import type { Viewport } from "next";
-import "@/styles/globals.css";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import "../styles/globals.css";
 
-import { ThemeProvider } from "@/contexts/theme-provider";
-import { siteConfig } from "@/config/site";
-import Navbar from "@/components/Navbar";
-import { Toaster } from "@/components/ui/toaster";
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+
+import { siteConfig } from "@/configs/site";
+
+import Navbar from "@/components/layouts/navbar";
+import Footer from "@/components/layouts/footer";
+import { Toaster } from "@/components/ui/toaster";
+
+import { getSocialsData } from "@/lib/db/db-helper";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -56,34 +59,25 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const socialsData = await getSocialsData();
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="flex h-screen flex-col overflow-x-hidden overflow-y-scroll scrollbar-track-primary scrollbar-thumb-background md:scrollbar-thin xl:snap-y xl:snap-mandatory">
-            <div className="bg-background text-foreground">
-              <Navbar />
-              {children}
-            </div>
-            <Toaster />
-          </main>
-        </ThemeProvider>
+        <Navbar />
+        <main className="flex min-h-screen bg-background text-foreground">
+          {children}
+        </main>
+        <Footer socialsData={socialsData} />
+        <Toaster />
       </body>
     </html>
   );

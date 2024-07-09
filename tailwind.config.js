@@ -52,6 +52,12 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      minHeight: {
+        custom: "calc(100vh - 64px)",
+      },
+      height: {
+        custom: "calc(100vh - 64px)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -84,5 +90,6 @@ module.exports = {
       nocompatible: true,
       preferredStrategy: "pseudoelements",
     }),
+    require("@tailwindcss/typography"),
   ],
 };
